@@ -32,14 +32,14 @@ service password-encryption
 --config banner nessage--
 banner motd #qqqqqq#
 
---disable dns lookup--
+--disable dns lookup --
 no ip domain-lookup
 
 -- create vlan--
 vlan#
 name##
 
---assign ort to vlan--
+--assign port to vlan--
 int range F0/1-8
 switchport mode access
 switchport access vlan#
@@ -75,8 +75,9 @@ copy running-config startup-config
 ---ospf---
 router ospf 1
 router-id #.#.#.#
-passive-interface g0/0/0
 network 10.1.20.0 0.0.0.255 area 0
+passive-interface g0/0/0
+
 exit
 
 show ip ospf interface
