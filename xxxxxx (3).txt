@@ -85,11 +85,11 @@ show ip ospf interface
 --ACL--
 #ip access-list standard BlockStudents
 #deny 10.0.0.0 0.255.255.255
-#permit any
+#permit ip any any
 #exit
 #int g0/0
 #ip access-group BlockStudents out
 #exit
-vvvbvbvbv
+
 
 
